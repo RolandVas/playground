@@ -1,0 +1,35 @@
+  mat-toolbar {
+    height: 50px;
+    background: #1976d2;
+    color: white;
+  }
+  
+  .example-container {
+    width: auto;
+    height: calc(100vh - 50px);
+  }
+
+  .nav {
+    width: 200px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      text-decoration: none;
+      margin-bottom: 4px;
+      padding: 8px;
+      background-color: #78a8d8;
+      border-radius: 5px;
+      color: rgb(39, 39, 39);
+
+      &:hover {
+        background-color: #1976d263;
+      }
+    }
+  }
+
+  mat-sidenav-content {
+    padding: 16px;
+  }
+  

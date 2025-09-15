@@ -1,0 +1,17 @@
+<mat-card class="container">
+    <h2>BehaviorSubject set UserName</h2>
+  
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="username" placeholder="Enter your username" />
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+        Set
+      </button>
+      <button mat-raised-button color="primary" (click)="sendSubject()">
+        Send event (Subject)
+      </button>
+    </form>
+  </mat-card>

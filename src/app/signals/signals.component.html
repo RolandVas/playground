@@ -1,0 +1,38 @@
+<div style="font-family: sans-serif; max-width: 500px; margin: auto; padding: 1rem; border: 1px solid #ccc; border-radius: 8px;">
+  <h2>🛍️ Bestellformular</h2>
+
+  <div style="margin-bottom: 1rem;">
+    <label>Menge:</label><br />
+    <button (click)="decrease()">−</button>
+    <span style="margin: 0 1rem;">{{ quantity() }}</span>
+    <button (click)="increase()">+</button>
+  </div>
+
+  <div style="margin-bottom: 1rem;">
+    <label>Stückpreis:</label>
+    <p>{{ unitPrice() }} €</p>
+  </div>
+
+  <div style="margin-bottom: 1rem;">
+    <label>
+      <input type="checkbox" [checked]="expressShipping()" (change)="toggleShipping()" />
+      Express-Versand (10 €)
+    </label>
+  </div>
+
+  <hr />
+
+  <p><strong>Zwischensumme:</strong> {{ rawTotal().toFixed(2) }} €</p>
+  @if (discountActive()) {
+    <p>
+      🎉 <strong>Rabatt:</strong> −{{ discountAmount().toFixed(2) }} €
+    </p>
+  }
+  <h3>Gesamtpreis: {{ totalPrice().toFixed(2) }} €</h3>
+
+  @if (discountActive()) {
+    <div style="margin-top: 1rem; color: green;">
+      🎉 Sie haben 10 % Rabatt erhalten!
+    </div>
+  }
+</div>

@@ -1,0 +1,9 @@
+<app-login-component></app-login-component>
+<div class="flex-mid-col">
+    <p>Wenn userProfileComponent erst nach dem Event geladen wird, sieht sie das Event nicht mehr – das Event wird vergessen.</p>
+    <button mat-raised-button color="primary" (click)="isHide = !isHide">Hide</button>
+</div>
+@if (isHide) {
+    <app-user-profile-component></app-user-profile-component>
+}
+

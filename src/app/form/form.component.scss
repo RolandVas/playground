@@ -1,0 +1,19 @@
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  button {
+    margin-top: 15px;
+    width: 100%;
+  }
+  
